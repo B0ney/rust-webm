@@ -10,6 +10,8 @@ fn main() {
     ];
     let mut c = cc::Build::new();
     c.cpp(true);
+    c.cpp_link_stdlib("stdc++");
+    c.cpp_link_stdlib_static(true);
     c.warnings(false);
     c.flag("-fno-rtti");
     c.flag("-std=gnu++11");
